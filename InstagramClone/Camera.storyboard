@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="MEr-dd-wGT">
+            <objects>
+                <viewController id="jhc-vq-P6F" customClass="CameraViewController" customModule="InstagramClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b0h-4B-XAT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wGj-uE-Q9h">
+                                <rect key="frame" x="0.0" y="88" width="414" height="118"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-photo" translatesAutoresizingMaskIntoConstraints="NO" id="tci-f6-Yie">
+                                        <rect key="frame" x="8" y="10" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="UW4-fW-NwY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZqI-hk-zsE">
+                                        <rect key="frame" x="110" y="10" width="296" height="100"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="tci-f6-Yie" firstAttribute="leading" secondItem="wGj-uE-Q9h" secondAttribute="leadingMargin" id="5WV-pN-VRe"/>
+                                    <constraint firstItem="ZqI-hk-zsE" firstAttribute="trailing" secondItem="wGj-uE-Q9h" secondAttribute="trailingMargin" id="Dhg-zy-yIq"/>
+                                    <constraint firstItem="ZqI-hk-zsE" firstAttribute="leading" secondItem="tci-f6-Yie" secondAttribute="trailing" constant="2" id="HLw-zY-jwC"/>
+                                    <constraint firstItem="tci-f6-Yie" firstAttribute="bottom" secondItem="wGj-uE-Q9h" secondAttribute="bottomMargin" id="dbL-hz-vjS"/>
+                                    <constraint firstItem="tci-f6-Yie" firstAttribute="top" secondItem="ZqI-hk-zsE" secondAttribute="top" id="egt-Jo-yfO"/>
+                                    <constraint firstItem="tci-f6-Yie" firstAttribute="bottom" secondItem="ZqI-hk-zsE" secondAttribute="bottom" id="fNJ-Mm-DYq"/>
+                                    <constraint firstItem="tci-f6-Yie" firstAttribute="top" secondItem="wGj-uE-Q9h" secondAttribute="top" constant="10" id="nnf-9M-AFP"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VC-iw-adZ">
+                                <rect key="frame" x="8" y="826" width="398" height="44"/>
+                                <color key="backgroundColor" red="0.67986475609999997" green="0.2296353615" blue="0.65289230090000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="dhJ-RJ-t8d"/>
+                                </constraints>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButtonPressed:" destination="jhc-vq-P6F" eventType="touchUpInside" id="ATA-zR-XBZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="wGj-uE-Q9h" secondAttribute="bottom" constant="690" id="1JE-c2-KzG"/>
+                            <constraint firstItem="5VC-iw-adZ" firstAttribute="leading" secondItem="EXo-Y8-kdx" secondAttribute="leading" constant="8" id="LOX-F1-sEE"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="5VC-iw-adZ" secondAttribute="bottom" constant="-8" id="RvX-T5-bCN"/>
+                            <constraint firstAttribute="trailing" secondItem="wGj-uE-Q9h" secondAttribute="trailing" id="Vvm-Qf-urm"/>
+                            <constraint firstItem="wGj-uE-Q9h" firstAttribute="leading" secondItem="b0h-4B-XAT" secondAttribute="leading" id="fXu-Zl-u1D"/>
+                            <constraint firstItem="wGj-uE-Q9h" firstAttribute="centerX" secondItem="5VC-iw-adZ" secondAttribute="centerX" id="iiW-DX-x4t"/>
+                            <constraint firstItem="wGj-uE-Q9h" firstAttribute="top" secondItem="EXo-Y8-kdx" secondAttribute="top" id="yNu-pe-ePp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EXo-Y8-kdx"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qpF-g9-ZFw">
+                        <barButtonItem key="leftBarButtonItem" title="Remove" id="99Q-qv-q5W">
+                            <color key="tintColor" red="0.67843137249999996" green="0.23137254900000001" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="remove:" destination="jhc-vq-P6F" id="LGV-qi-Ss2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="photo" destination="tci-f6-Yie" id="dCq-an-Huz"/>
+                        <outlet property="removeBarButton" destination="99Q-qv-q5W" id="adM-6V-ZwD"/>
+                        <outlet property="shareButton" destination="5VC-iw-adZ" id="lD8-Rw-ARV"/>
+                        <outlet property="textView" destination="ZqI-hk-zsE" id="pms-IB-iAk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Qw-Qh-nR8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4797.1014492753629" y="479.46428571428567"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GG6-fG-CWd">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationCamera" automaticallyAdjustsScrollViewInsets="NO" id="yIT-cP-0uV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Photo" id="Dcd-x2-hh0"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vvt-g4-F6g">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jhc-vq-P6F" kind="relationship" relationship="rootViewController" id="ghK-oR-fBM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PBI-xM-kGv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3886.9565217391309" y="479.46428571428567"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Photo" width="22" height="23"/>
+        <image name="placeholder-photo" width="840" height="600"/>
+    </resources>
+</document>
